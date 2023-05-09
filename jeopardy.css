@@ -1,0 +1,93 @@
+/* some colors you may find useful:
+  #115ff4
+  #060ce9
+  #28a200
+  #8d2ab5
+  #74119c
+*/
+body {
+  background-color: #115ff4;
+}
+
+.title {
+  text-align: center;
+  color: white;
+  font-size: 70px;
+  margin-bottom: 5px;
+}
+
+.start {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  border-radius: .1cm;
+  margin-bottom: 10px;
+  width: 125px;
+  height: 40px;
+  background-color: #8d2ab5;
+  color: white;
+  transition: background-color .5s;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #74119c;
+  transition: background-color .5s;
+}
+
+.spinner::before {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 10px solid white;
+  border-bottom-color: #28a200;
+  animation: 1s ease-in-out infinite spinner;
+  transform: translate3d(-50%, -50%, 0);
+  content: '';
+}
+
+@keyframes spinner {
+  0% {
+    transform: translate3d(-50%, -50%, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(-50%, -50%, 0) rotate(360deg);
+  }
+}
+
+#jeopardy {
+  background-color: #060ce9;
+  color: white;
+  text-align: center;
+  margin: auto;
+  z-index: 1;
+}
+
+table.hidden {
+  display: none;
+}
+
+th {
+  height: 50px;
+}
+
+td {
+  width: 15vw;
+  height: 110px;
+}
+
+td:hover {
+  cursor: pointer;
+}
+
+table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+
+
